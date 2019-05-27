@@ -1,7 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-<body>
+<?php require("header.php"); ?>
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
     Select the question and the file to upload:
@@ -9,8 +6,8 @@
 		<option value='question1'> Question 1 </option>
 	</select>
     <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload file" name="submit">
+    <input type="submit" value="Check solution" name="submit">
 </form>
 
-</body>
-</html>
+
+<?php require("footer.php"); ?>
