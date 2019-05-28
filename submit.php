@@ -1,13 +1,24 @@
 <?php require("header.php"); ?>
 
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    Select the question and the file to upload:
+<form action="check_solution.php" method="post" enctype="multipart/form-data" id="submit_form">
+    Select the question and then write the code under:
 	<select name = 'question'>
-		<option value='question1'> Question 1 </option>
+    <?php
+    $sql = "SELECT * FROM questions";
+    if($res=$conn->query($sql)){
+      while($row=$res->fetch_assoc()){
+        echo "<option value=q".$row['id']."> Question ".$row['id']." </option>";
+    ?>
+    <?php
+      }
+    }
+     ?>
 	</select>
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Check solution" name="submit">
+  <br>
+  <textarea name="solution_code" form="submit_form"> </textarea>
+  <input type="submit" value="Check solution" name="submit">
 </form>
+
 
 
 <?php require("footer.php"); ?>

@@ -5,7 +5,7 @@ require("config.php");
 $username= $_POST['username'];
 $pass = $_POST['password'];
 
-$sql = "SELECT * FROM user WHERE username='$username'";
+$sql = "SELECT * FROM users WHERE username='$username'";
 $res = $conn->query($sql);
 if($res){
   $row = $res->fetch_assoc();
