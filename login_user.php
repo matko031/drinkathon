@@ -13,12 +13,12 @@ if($res){
 
     $_SESSION['user_id'] = $row['id'];
     $_SESSION['loggedin']=true;
-    header("Location: /index.php");
-
-
+    header("Location: /");
+    die;
   }
-
 }
+
+header("Location: /");
 
 
 

@@ -1,4 +1,8 @@
 <?php require("header.php");
+if($user==NULL){
+  header("Location:/");
+}
+
 $sql = "SELECT * FROM users WHERE id=$user";
 $res= $conn->query($sql);
 $row=$res->fetch_assoc();
