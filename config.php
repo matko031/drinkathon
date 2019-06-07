@@ -4,10 +4,10 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-$servername = "localhost";
-$username = "delimir";
+$servername = "mysql.ulyssis.org";
+$username = "matko031";
 $password = "sir49627";
-$dbname = "drinkathon";
+$dbname = "matko031";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
