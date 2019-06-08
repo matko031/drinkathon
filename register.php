@@ -1,6 +1,3 @@
-<?php
-require("header.php");
-?>
 
 <form action="register_user.php" method="post">
   <label for=username>Username:</label>
@@ -11,7 +8,3 @@ require("header.php");
 
   <button type="submit">Register</button>
 </form>
-
-<?php
-require("footer.php");
-?>

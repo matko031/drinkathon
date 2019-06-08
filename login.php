@@ -1,8 +1,5 @@
-<?php
-require("header.php");
-?>
 
-<form action="login_user.php" method="post">
+<form action="/login_user" method="post">
   <label for=username>Username:</label>
   <input type="text" name="username" placeholder="Username" required>
 
@@ -11,7 +8,3 @@ require("header.php");
 
   <button type="submit">Login</button>
 </form>
-
-<?php
-require("footer.php");
-?>

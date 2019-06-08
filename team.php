@@ -1,10 +1,10 @@
-<?php require("header.php");
+<?php
 if($user==NULL){
   header("Location:/");
 }
 
 $sql = "SELECT * FROM users WHERE id=$user";
-$res= $conn->query($sql);
+$res= $db->query($sql);
 $row=$res->fetch_assoc();
 
 
@@ -36,7 +36,3 @@ echo "</table>";
 
 
 ?>
-
-
-
-<? require("footer.php") ?>

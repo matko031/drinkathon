@@ -15,4 +15,4 @@ else {
 }
 
 
-require("footer.php")?>
+?>

@@ -4,15 +4,15 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-$servername = "mysql.ulyssis.org";
+$servername = "localhost";
 $username = "matko031";
 $password = "sir49627";
-$dbname = "matko031";
+$dbname = "drinkathon";
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$db = new mysqli($servername, $username, $password, $dbname);
 
-if (!$conn) {
+if (!$db) {
    die("Connection failed: " . mysqli_connect_error());
 }
 
@@ -22,5 +22,4 @@ if(isset($_SESSION['user_id'])){
 else{
   $user=NULL;
 }
-
 ?>

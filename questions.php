@@ -1,5 +1,5 @@
 <?php
-require("header.php");
+
 $sql = "SELECT * FROM questions";
 if($res = $conn -> query($sql)){
   while($q = $res->fetch_assoc() ){
@@ -8,7 +8,4 @@ if($res = $conn -> query($sql)){
   }
 }
 
-
-
-require("footer.php");
 ?>
