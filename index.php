@@ -39,8 +39,8 @@ switch ($url) {
     break;
 
 
-
   default:
+    header('home');
     require('homepage.php');
     break;
 }
