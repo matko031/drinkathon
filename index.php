@@ -40,7 +40,6 @@ switch ($url) {
 
 
   default:
-    header('home');
     require('homepage.php');
     break;
 }
