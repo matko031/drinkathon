@@ -18,6 +18,10 @@ switch ($url) {
     require('register.php');
     break;
 
+  case '/register_user':
+    require('register_user.php');
+    break;
+
   case '/login':
     require('login.php');
     break;
@@ -36,6 +40,10 @@ switch ($url) {
 
   case '/logout':
     require ('logout_user.php');
+    break;
+
+  case '/check_solution':
+    require ('check_solution.php');
     break;
 
 

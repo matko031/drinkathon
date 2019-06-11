@@ -18,11 +18,11 @@ echo "Welcome ".$row['username']."!";
 <?php
 $counter =0;
 $sql1 = "SELECT * FROM questions order by id asc";
-$res1 = $conn->query($sql1);
+$res1 = $db->query($sql1);
 while($q=$res1->fetch_assoc()){
   $counter++;
   $sql2 = "SELECT * FROM points WHERE question_nb=".$q['id']." AND user_id=$user";
-  $res2 = $conn->query($sql2);
+  $res2 = $db->query($sql2);
   if($p=$res2->fetch_assoc()){
     $score=$p['points'];
   }

@@ -1,5 +1,5 @@
 
-<form action="register_user.php" method="post">
+<form action="register_user" method="post">
   <label for=username>Username:</label>
   <input type="text" name="username" placeholder="Username" required>
 
