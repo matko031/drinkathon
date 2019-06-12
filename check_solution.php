@@ -1,21 +1,29 @@
 <?php
+$question = $_POST['question'];
 $sql = "SELECT username FROM users WHERE id='".$user."'";
+
 if($res = $db->query($sql)){
   $username = $res->fetch_assoc()['username'];
 }
-$file_name = "users/".$username."/".$_POST['question'].".py";
+$user_solution = "users/".$username."/".$question.".py";
+$err_file = 'users/'.$username.'/err_'.$question;
+
 $code = $_POST['solution_code'];
-$file = fopen($file_name, "w");
+$file = fopen($user_solution, "w");
 fwrite($file, $code);
 fclose($file);
-exec('chmod +x '.$file_name);
 
+exec('chmod +x '.$user_solution);
 
-exec('"`python3 '.$file_name.' 2>err`"');
-$fn = fopen("users/".$username."/err", 'r');
-while (!feof($fn)){
-echo fgets($fn);
-echo '<br>';
+$command = 'python3 '.$user_solution.' 2>'.$err_file;
+$res = exec($command);
+if(strlen($err_file)==0){
+  echo $res;
 }
-fclose($fn);
- ?>
+
+else{
+  echo $res;
+  echo '<br>';
+  echo nl2br(file_get_contents($err_file));
+}
+?>

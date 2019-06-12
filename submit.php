@@ -14,6 +14,6 @@
      ?>
 	</select>
   <br>
-  <textarea name="solution_code" form="submit_form"> </textarea>
+  <textarea name="solution_code" form="submit_form"></textarea>
   <input type="submit" value="Check solution" name="submit">
 </form>
