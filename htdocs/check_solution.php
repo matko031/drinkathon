@@ -25,7 +25,5 @@ else{
   echo $res;
   echo '<br>';
   echo nl2br(file_get_contents($err_file));
-  echo '<br><br><br>';
-  echo '<h1>LOGIC ERROR SUCKER, DRINK TWO SHOTS!!!</h1>'
 }
 ?>
