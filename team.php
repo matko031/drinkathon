@@ -8,8 +8,10 @@ $res= $db->query($sql);
 $row=$res->fetch_assoc();
 
 
-echo "Welcome ".$row['username']."!";
+echo "<h1>Welcome ".$row['username']."! </h1>";
 ?>
+<h3> This is your team homepage where you can see your current scores on all the questions.</h3>
+<h4> If you have less points than you thought, you can take a shot to feel better :) </h4>
 <table>
   <tr>
     <th> Question number </th>

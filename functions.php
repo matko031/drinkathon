@@ -19,4 +19,28 @@ function login_user($u, $p, $db){
 }
 
 
+function compare_files($file1, $file2){
+  $f1 = fopen($file1, 'r');
+  $f2 = fopen($file2, 'r');
+  $counter = 0;
+  echo 'line number: your solution - correct solution <br>';
+  while(1){
+    $counter ++;
+    $a = fgets($f1);
+    $b = fgets($f2);
+    if(feof($f1) || feof($f2)){
+      break;
+    }
+    else{
+      echo $counter.': '.$a.' - '.$b.'<br>';
+      if($a != $b){
+        echo '<h1>Sucker, your solution is wrong. LOOOOOOOOSEEEER!</h1>';
+        echo "<img src=\"images/loser.gif\" alt=\"Smiley face\" ><br>";
+        echo '<h2>Drink one shot!</h2>';
+        break;
+        }
+      }
+    }
+}
+
 ?>

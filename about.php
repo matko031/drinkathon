@@ -1,3 +1,13 @@
-<?php
-
-?>
+<p>
+  This is a website made purely as an free-time fun project of a computer science student with too much time in his life and too much love for alcohol and programming.
+  The concept is very simple. You register as a team via the big gray register button in the navbar (duh...) and you're good to go.
+</p>
+<p>
+  All questions are to be found under the big gray questions button in the navbar (duh...) and can be submitted via the big gray submit button (d...ok I'll stop now).
+  You are free to choose any programming language that has ever existed as long as that language is python. You are also completely free to choose which version of your
+  language of choice you want to use as long as that version is 3. Then you can choose a question, read it, write your code and submit it. When you submit the code,
+  it gets checked for errors and depending on the result, you get to, you guessed it right, DRINK SOME SHOTS!!!!
+</p>
+<p>
+  Let's start coding and may the drunkest programmer win!
+</P>

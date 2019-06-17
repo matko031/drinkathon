@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "users/matko/q1.py", line 3, in <module>
-    ksdjslkfjd
-NameError: name 'ksdjslkfjd' is not defined
