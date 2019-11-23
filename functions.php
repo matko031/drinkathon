@@ -1,12 +1,13 @@
 <?php
 
-function login_user($u, $p, $db){
+function login_team($t, $p, $db){
 
-  $sql = "SELECT * FROM users WHERE username='$u'";
+  $sql = "SELECT * FROM teams WHERE name='$t'";
   if($res = $db->query($sql)){
-    $row = $res->fetch_assoc();
-    if(password_verify($p, $row['password_hash'])){
-      $_SESSION['user_id'] = $row['id'];
+    $team = $res->fetch_assoc();
+    if(password_verify($p, $team['password'])){
+      $_SESSION['team_id'] = $team['id'];
+      $_SESSION['team_name'] = $team['name'];
       $_SESSION['loggedin']=true;
       header("Location: /");
     }
@@ -29,7 +30,7 @@ function compare_files($file1, $file2){
     $counter ++;
     $a = fgets($f1);
     $b = fgets($f2);
-    if(feof($f1) || feof($f2)){
+    if((feof($f1) || feof($f2)) && $counter > 1){
       break;
     }
     else{
