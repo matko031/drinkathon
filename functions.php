@@ -30,7 +30,10 @@ function compare_files($file1, $file2){
     $counter ++;
     $a = fgets($f1);
     $b = fgets($f2);
-    if((feof($f1) || feof($f2)) && $counter > 1){
+    if((feof($f1) || feof($f2))){
+      if($counter < 2){
+        $correct=false;
+      }
       break;
     }
     else{
