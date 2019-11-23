@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "users/matko/q1.py", line 1, in <module>
-    dskfjslk
-NameError: name 'dskfjslk' is not defined
