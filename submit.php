@@ -8,8 +8,8 @@ if($res = $db->query($sql)){
   $team_name = $res->fetch_assoc()['name'];
 }
 
-$question= explode('/',$_SERVER['REQUEST_URI'])[2];
-$file = 'teams/'.$team_name.'/answers/'.$question.'/code.py';
+$question_id= explode('/',$_SERVER['REQUEST_URI'])[2];
+$file = 'teams/'.$team_name.'/answers/'.$question_id.'/code.py';
 $code='';
 
 if(file_exists($file)){
@@ -23,6 +23,6 @@ if(file_exists($file)){
 
 <form action="/check_solution" method="post" enctype="multipart/form-data" id="submit_form">
   <textarea name="solution_code" form="submit_form"><?php echo $code;?></textarea>
-  <input type='hidden' name = 'question' value='<?php echo $question; ?>'>
+  <input type='hidden' name = 'question_id' value='<?php echo $question_id; ?>'>
   <input type="submit" value="Check solution" name="submit">
 </form>

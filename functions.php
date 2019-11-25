@@ -2,6 +2,7 @@
 
 function login_team($t, $p, $db){
 
+
   $sql = "SELECT * FROM teams WHERE name='$t'";
   if($res = $db->query($sql)){
     $team = $res->fetch_assoc();
@@ -28,6 +29,11 @@ function compare_files($file1, $file2){
   $correct=true;
   while(1){
     $counter ++;
+    if($counter > 200){
+      echo '<h3> Answer too long, drink one shot extra! </h3>';
+      $correct = false;
+      break;
+    }
     $a = fgets($f1);
     $b = fgets($f2);
     if((feof($f1) || feof($f2))){
@@ -39,16 +45,12 @@ function compare_files($file1, $file2){
     else{
       echo $counter.': '.$a.' - '.$b.'<br>';
       if($a != $b){
-        echo '<h1>Sucker, your solution is wrong. LOOOOOOOOSEEEER!</h1>';
-        echo "<img src=\"images/loser.gif\" alt=\"Smiley face\" ><br>";
-        echo '<h2>Drink one shot!</h2>';
-	$correct=false;
-	break;
+        return false;
         }
       }
   }
   if($correct){
-  	echo '<h2> Congrats, your solution is correct. You may drink one shot to celebrate!</h2>';
+    return true;
   }
 }
 

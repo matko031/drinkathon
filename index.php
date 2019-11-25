@@ -54,10 +54,16 @@ switch ($url[1]) {
     require ('submit.php');
     break;
 
+  case 'questions_dir':
+    header('Location: questions_dir/'.url[3]);
+    break;
+
   default:
     require('homepage.php');
     break;
 }
 
-require("footer.php");
+//require("footer.php");
 ?>
+</body>
+</html>

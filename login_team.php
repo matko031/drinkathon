@@ -1,5 +1,3 @@
 <?php
-$team = $_POST['team'];
-$pass = $_POST['password'];
-login_team($team, $pass, $db);
+login_team($_POST['team'], $_POST['password'], $db);
 ?>
