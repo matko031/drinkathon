@@ -8,7 +8,7 @@ if($res = $db->query($sql)){
 
 $location = 'teams/'.$team_name.'/answers/'.$question_id;
 if( !file_exists($location)){
-  mkdir($location);
+  mkdir($location, 0777, true);
 }
 
 $team_code = "teams/".$team_name."/answers/".$question_id."/code.py";
@@ -32,7 +32,9 @@ if(strlen(file_get_contents($err_file))==0){
   if($solution){
     $s1 = $db -> prepare("SELECT points FROM questions WHERE id=?");
     $s1->bind_param('s', $question_id);
-    $points = $s1 -> execute();
+    $s1 -> execute();
+    $points = $s1->get_result();
+    $points = $points -> fetch_assoc()['points'];
     $s1->close();
 
     $s2 = $db -> prepare("SELECT * FROM team_scores WHERE team_id=? AND question_id=?");
@@ -45,6 +47,7 @@ if(strlen(file_get_contents($err_file))==0){
     }
     else{
       $s4 = "INSERT INTO team_scores (question_id, team_id, score) VALUES (".$question_id.", ".$_SESSION['team_id'].", ".$points.")";
+      $db ->query($s4);
     }
     echo '<h2> Congrats, your solution is correct. You may drink one shot to celebrate!</h2>';
   }

@@ -7,7 +7,7 @@
   </section>
 
   <section class="boxes">
-    <a href='https://en.wikipedia.org/wiki/Python_(programming_language)'>
+    <a target='blank' href='https://en.wikipedia.org/wiki/Python_(programming_language)'>
     <div class="box" >
       <table>
         <tr><td class='box-image'>
@@ -23,7 +23,7 @@
     </div>
     </a>
 
-    <a href='https://en.wikipedia.org/wiki/Club-Mate'>
+    <a target='blank' href='https://en.wikipedia.org/wiki/Club-Mate'>
     <div class="box">
       <table>
         <tr><td class='box-image'>
@@ -39,7 +39,7 @@
     </div>
     </a>
 
-    <a href='https://en.wikipedia.org/wiki/Ada_Lovelace'>
+    <a target='blank' href='https://en.wikipedia.org/wiki/Ada_Lovelace'>
     <div class="box">
       <table>
         <tr><td class='box-image'>
@@ -56,7 +56,7 @@
     </div>
     </a>
 
-    <a href='https://en.wikipedia.org/wiki/Rakia'>
+    <a target='blank' href='https://en.wikipedia.org/wiki/Rakia'>
     <div class="box">
       <table>
         <tr><td class='box-image'>
