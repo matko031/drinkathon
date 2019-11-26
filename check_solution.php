@@ -34,7 +34,8 @@ if(strlen(file_get_contents($err_file))==0){
     $s1 = $db -> prepare("SELECT points FROM questions WHERE id=?");
     $s1->bind_param('s', $question_id);
     $s1 -> execute();
-    $points = $s1->get_result()->fetch_assoc();
+    $points = $s1->get_result();
+    $points = $points->fetch_assoc()['points'];
     $s1->close();
 
     $s2 = $db -> prepare("SELECT * FROM team_scores WHERE team_id=? AND question_id=?");
@@ -46,10 +47,10 @@ if(strlen(file_get_contents($err_file))==0){
       $db->query($s3);
     }
     else{
-      echo $points;
       $s4 = "INSERT INTO team_scores (question_id, team_id, score) VALUES (".$question_id.", ".$_SESSION['team_id'].", ".$points.")";
     }
     echo '<h2> Congrats, your solution is correct. You may drink one shot to celebrate!</h2>';
+    echo "<img src=\"images/celebration.gif\" alt=\"Smiley face\" ><br>";
   }
 
   else{
