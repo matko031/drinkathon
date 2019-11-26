@@ -3,9 +3,12 @@
 function login_team($t, $p, $db){
 
 
-  $sql = "SELECT * FROM teams WHERE name='$t'";
-  if($res = $db->query($sql)){
-    $team = $res->fetch_assoc();
+  $s1 = $db->prepare("SELECT * FROM teams WHERE name=?");
+  $s1 -> bind_param('s', $t);
+  if($s1->execute()){
+    $team=$s1->get_result()->fetch_assoc();
+    echo var_dump($team);
+    $s1->close();
     if(password_verify($p, $team['password'])){
       $_SESSION['team_id'] = $team['id'];
       $_SESSION['team_name'] = $team['name'];
@@ -19,6 +22,7 @@ function login_team($t, $p, $db){
   }
   echo "Login failed";
 }
+
 
 
 function compare_files($file1, $file2){

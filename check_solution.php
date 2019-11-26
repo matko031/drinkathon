@@ -14,7 +14,8 @@ if( !file_exists($location)){
 $team_code = "teams/".$team_name."/answers/".$question_id."/code.py";
 $err_file = 'teams/'.$team_name.'/answers/'.$question_id.'/err';
 $team_solution ='teams/'.$team_name.'/answers/'.$question_id.'/solution';
-$correct_solution = 'competition_logic/correct_solutions/'.$question_id;
+$correct_solution = "questions_dir/".$question_id."/output";
+$input = "questions_dir/".$question_id."/input";
 
 
 $code = $_POST['solution_code'];
@@ -24,7 +25,7 @@ fclose($file);
 
 exec('chmod +x '.$team_code);
 
-$command = 'ulimit -t 2 && python3 '.$team_code.' 2>'.$err_file.' 1>'.$team_solution;
+$command = 'ulimit -t 2 && cat '.$input.' | python3 '.$team_code.' 2>'.$err_file.' 1>'.$team_solution;
 exec($command);
 if(strlen(file_get_contents($err_file))==0){
   $solution = compare_files($team_solution, $correct_solution);
@@ -32,7 +33,8 @@ if(strlen(file_get_contents($err_file))==0){
   if($solution){
     $s1 = $db -> prepare("SELECT points FROM questions WHERE id=?");
     $s1->bind_param('s', $question_id);
-    $points = $s1 -> execute();
+    $s1 -> execute();
+    $points = $s1->get_result()->fetch_assoc();
     $s1->close();
 
     $s2 = $db -> prepare("SELECT * FROM team_scores WHERE team_id=? AND question_id=?");
@@ -44,6 +46,7 @@ if(strlen(file_get_contents($err_file))==0){
       $db->query($s3);
     }
     else{
+      echo $points;
       $s4 = "INSERT INTO team_scores (question_id, team_id, score) VALUES (".$question_id.", ".$_SESSION['team_id'].", ".$points.")";
     }
     echo '<h2> Congrats, your solution is correct. You may drink one shot to celebrate!</h2>';
