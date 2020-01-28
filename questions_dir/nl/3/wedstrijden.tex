@@ -1,0 +1,38 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+
+\title{Competitions}
+\maketitle
+
+\paragraph{Task\\ \\}
+
+In this program the result of a couple of groups in a competition are analysed. Per group, the results of the matches are given. Each team is represented as a capital letter. First team is named A, second B etc. In every group every team plays exactly once against every other team from the group. In a group with 3 teams, there are 3 matches and the results are given in a following form: \\
+A 1 B 3 \\
+C 1 A 2 \\
+B 2 C 2 \\
+
+In the first match team A had score 1 and team B score 3. In the second one, team C had score 1 and team A 2. In the last one, both teams B and C had a score of 2. \\
+
+The winner is chosen as follows. Every time one of the two teams wins, it gets 3 points. For every even score, both teams get 1 point. The winning team is the one which has the most points at the end of the competition. If there are multiple teams with the same score, the winner is the one that has bigger sum of their individual scores for every match. If there ar e then still multiple teams with the same score, they are all declared winners.
+
+\paragraph{Input\\ \\}
+
+The first row contains the number of competitions. After that follow, per competition, a row with the number of teams and a row with the number of matches in the given competition. \\
+2 \\3 \\3 \\A 1 B 3 \\C 1 A 2 \\ B 2 C 2\\ 2\\ 1\\ B 1 A 1 \\
+
+You can assume that the number of competitions is between 1 and 100. The number in every competition will be between 2 and 25 and the number of matches per competition between 1 and 1000. Each row with the results consists out of a capital letter, score, a capital letter and a score. These will always be separated by a single space. A score is always between 0 and 9, including both 0 and 9.
+	
+\paragraph{Output\\ \\}
+
+Per competition, you have to give the number of the competition followed by the winners. If there are multiple winners, they need to be placed alphabetically next to each other. There are no spaces between the winning teams and there is a single space between the competition number and the winning teams. \\
+1 B \\
+2 AB \\
+
+
+
+
+\end{document}
