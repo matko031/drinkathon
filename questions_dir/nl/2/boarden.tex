@@ -1,0 +1,39 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+
+\title{Airplane boarding}
+\maketitle
+
+Soon it will be summer again, and many people will leave on vacation with an airplane. The last step before the take of is the boarding where passangers put their baggage in the locker above their heads and go sit on their seats. Depending on the flying company, this process can happen in several different ways: some companies try to fill the plane from back to front, others will give priority to the passangers who are willing to pay more and others will just let people board in random order.
+
+\paragraph{Task\\ \\}
+
+In this task, we will look at how lang it takes for passangers to board the airplane. In this plane all seats are placed one after other and next to them is lane wide enough to fit exaclty one person. The seats are numbered with low numbers in front and rising towards the end and the passangers enter the plane at the front. The time needed to board is measured in the time units of how long it takes for a passanger to leave their baggage and sit on their place. As input, you will get the seat number of each passanger waiting in the queue. It takes only one time unit for a passanger to leave their baggage and sit on their place, but during that time, other passangers have to wait. In other words, if a passanger is setting up at seat number 6, the person with seat number 8, has to wait. This is not so other way around. If passanger with seat number 6 is waiting behind a person with seat number 8, they can both go to their seats at the same time.
+
+\paragraph{Input\\ \\}
+
+The first row of the inpput contains an integer n with 1 $\leq$ $n$ $\leq$ $1000$ that represents the number of test cases. After that follow several rows per test case. All numbers in the input appearing in the same row are separated by a space. All rows end with a single newline character. Every test case begins with the number of passangers (and chairs). This is an integer p with $1$ $\leq$ $p$ $\leq$ $1000$. This is followed by by $p$ lines, each containing integer s with $1$ $\leq$ $s$ $\leq$ $p$, designating the seat numbers of the passangers waiting in the queue
+	
+\paragraph{Output\\ \\}
+
+For each case there is 1 output row with 2 numbers: first the number of the test case and then the number of time units needed to completely board the airplane. The test case number starts with 1 and increments by 1 in every following test case.
+
+
+\paragraph{Example\\ \\}
+
+\textbf{Input} \\
+2 \\10 \\2 \\7 \\9 \\4\\ 3\\1 \\8 \\5 \\6 \\10 \\6 \\ 5\\ 4\\ 3\\ 2\\ 1\\ 6\\
+
+\textbf{Input} \\
+1 6 \\
+2 2
+
+
+
+
+
+\end{document}

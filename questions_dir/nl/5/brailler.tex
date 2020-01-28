@@ -1,0 +1,53 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+
+\title{Braille}
+\maketitle
+
+\paragraph{Task\\ \\}
+
+
+Braille is a reliefalphabet where the letters (and other symbols) are represented as points ona a paper: for each letter, there is a uniek combination of points in a 2x3 matrix. Braille is read by gliding over the text with the fingers en feeling the letters. The task here is to convert Braille to normal text. You will first get the coding table used to encode 26 letters of the alphabet. After that, you will get a Braille text which you need to convert to normal aplhabet
+
+\paragraph{Input\\ \\}
+
+The input looks like this: \\
+\begin{itemize}
+	\item Three rows with each 52 symbols, each either a '.' or an 'x'. Those repsresent the Braille encoding of lettres from A to Z
+	\item One row giving the number of test cases
+	\item Per test case, you get three rows which together form a text in Braille, also with two columns per letter
+\end{itemize}
+
+\begin{center}
+Example input
+\end{center}
+\mbox{}
+
+x.x. xxxxx . xxxxx ..x.xx.x. xxxxx . xxxxx ..x.xx.x.. xxxxxx .\\
+..x....x.xx. xxxxx .xx ..x....x.xx. xxxxx .xx ..x.xx ...x.x\\
+.................... x.x.x.x.x.x.x.x.x.x.xxxx. xxxxxxx
+	
+\paragraph{Output\\ \\}
+
+For each test case, you answer with one row of text. This contains the following information, separated by a space::
+\begin{enumerate}
+	\item The number of the test case. This starts with 1 en gets increased by one for each following case.
+	\item The alphabetical text coresponding to the test case.
+\end{enumerate}
+
+
+\begin{center}
+Example input
+\end{center}
+\mbox{} \\
+1 A \\
+2 VPW
+
+
+
+
+\end{document}
