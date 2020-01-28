@@ -44,33 +44,27 @@ function compare_files($file1, $file2){
     $ea = feof($f1);
     $eb = feof($f2);
     if(($ea || $eb)){
-      if(!$eb || $counter < 2){
-        if ($counter <2) echo 'No output';
-        if (!$eb) echo '<h2>Your solution is shorter than the correct one</h2>';
+      if($counter < 2){
+        echo 'No output';
         $correct = false;
       }
       break;
     }
     else{
-      array_push($output, $counter.': '.$a.' - '.$b.'<br>');
+      echo $counter.': '.$a.' - '.$b.'<br>';
       if($a != $b){
-        foreach($output as $str){
-          echo $str;
         return false;
         }
       }
     }
-  }
+  
 
   if($correct){
     return true;
   }
-
-  else{
-    foreach($output as $str){
-      echo $str;
-    }
-  }
 }
+
+  
+
 
 ?>

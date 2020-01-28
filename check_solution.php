@@ -50,7 +50,7 @@ if(strlen(file_get_contents($err_file))==0){
       $s4 = "INSERT INTO team_scores (question_id, team_id, score) VALUES (".$question_id.", ".$_SESSION['team_id'].", ".$points.")";
       $db ->query($s4);
     }
-    echo '<h2> Congrats, your solution is correct. You may drink one shot to celebrate!</h2>';
+    echo '<h2> Congrats, your solution is correct. You may drink two shot to celebrate!</h2>';
     echo "<img src=\"images/celebration.gif\" alt=\"Smiley face\" ><br>";
   }
 
@@ -66,7 +66,7 @@ else{
   echo nl2br(file_get_contents($team_solution));
   echo '<br>';
   echo '<br><br><br>';
-  echo '<h1>SYNTAX ERROR SUCKER, DRINK TWO SHOTS!!!</h1>';
+  echo '<h1>SYNTAX ERROR SUCKER, DRINK ONE SHOT!!!</h1>';
   echo "<img src=\"images/shots.gif\" alt=\"Smiley face\" ><br>";
 }
 

@@ -41,5 +41,4 @@ for i in range(nb_test):
  output=""
  for term in inpt:
   output += encoding[term]
- if i <35:
-  print(str(i+1)+" " + output)
+ print(str(i+1+1)+" "+output)
