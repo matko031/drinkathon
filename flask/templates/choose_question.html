@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  {% for question in questions %}
+    <a href="submit/{{question.id}}" >{{question.name}}<br></a>
+  {% endfor %}
+
+
+{% endblock %}

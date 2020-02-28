@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  {% for question in questions %}
+    <a href="/static/questions/nl/{{loop.index}}/{{question.name}}" target="_blank">{{question.name}}<br></a>
+  {% endfor %}
+
+
+{% endblock %}

@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "teams/matko/answers/1/code.py", line 3, in <module>
-    row1 = list(input())
-KeyboardInterrupt

@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<form action="" method="post" enctype="multipart/form-data" id="submit_form">
+  <textarea name="code" form="submit_form">{{code}}</textarea>
+  <input type='hidden' name = 'question_id' value='<{{id}}'>
+  <input type="submit" class='btn btn-primary' value="Check solution" name="submit">
+</form>
+
+{% endblock %}
