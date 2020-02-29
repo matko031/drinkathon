@@ -1,18 +1,16 @@
 <?php
 
 function login_team($t, $p, $db){
-
-
   $s1 = $db->prepare("SELECT * FROM teams WHERE name=?");
   $s1 -> bind_param('s', $t);
   if($s1->execute()){
     $team=$s1->get_result()->fetch_assoc();
-    echo var_dump($team);
     $s1->close();
     if(password_verify($p, $team['password'])){
       $_SESSION['team_id'] = $team['id'];
       $_SESSION['team_name'] = $team['name'];
       $_SESSION['loggedin']=true;
+
       header("Location: /");
     }
     else{
@@ -20,7 +18,6 @@ function login_team($t, $p, $db){
       die();
     }
   }
-  echo "Login failed";
 }
 
 
@@ -57,14 +54,14 @@ function compare_files($file1, $file2){
         }
       }
     }
-  
+
 
   if($correct){
     return true;
   }
 }
 
-  
+
 
 
 ?>

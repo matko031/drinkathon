@@ -14,13 +14,14 @@
   <li><a href="/"> Home </a></li>
   <li><a href="/about"> About </a></li>
   <li><a href="/questions"> Questions </a></li>
-  <?php if(!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']){ ?>
+  <?php
+  if( !isset($_SESSION['loggedin']) || !$_SESSION['loggedin']){ ?>
   <li><a href="/register"> Register </a></li>
   <li><a href="/login"> Login </a></li>
   <?php } else {
-    $sql='select * from users where id='.$_SESSION['team_id'];
+    $sql='select * from teams where id='.$_SESSION['team_id'];
     if($res = $db->query($sql)){
-      $username = $res->fetch_assoc()['username'];
+      $username = $res->fetch_assoc()['name'];
     }
     ?>
   <li><a href="/team"> Team </a></li>

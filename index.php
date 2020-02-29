@@ -2,7 +2,7 @@
 $url = explode('/',$_SERVER['REQUEST_URI']);
 
 
-//require("config.php");
+require("config.php");
 require("header.php");
 include("functions.php");
 switch ($url[1]) {
