@@ -1,7 +1,0 @@
-DirectoryIndex index.php
-     <IfModule mod_rewrite.c>
-         RewriteEngine On
-
-         RewriteRule !^(css|images|phpmyadmin|questions_dir) index.php
-
-     </IfModule>
