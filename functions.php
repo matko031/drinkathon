@@ -31,7 +31,7 @@ function compare_files($file1, $file2){
   $correct=true;
   while(1){
     $counter ++;
-    if($counter > 200){
+    if($counter > 1000){
       echo '<h3> Answer too long, drink one shot extra! </h3>';
       $correct = false;
       break;
