@@ -1,0 +1,64 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[official]{eurosym}
+\begin{document}
+
+\title{Ranking}
+\maketitle
+
+
+
+In lots of sports, the contestants (or teams) receive points which makes possible for one to create a ranking with the best contestant/team at the first place. The assignement of points is strongly dependent on the sport in question. Once each participant has received their points, the ranking can be created. That is the goal of the programme you need to write in this exercice. The contestant/team with the highes number of points gets rank 1. The next one gets rank 2, etc. It is possible that two persons or teams have same number of points. In that case, they both receive the same rank. If there are 3 participants/teams with the highest score, all 3 of them will receive rank 1. The next participant/team will receive rank 4.
+
+
+\paragraph{Input\\ \\}
+The input begins with one row that gives the number of test cases T. Per test case, there is a row containing the number of teams N. Per each team, there is a row containing the name and the score separated by a space.This list is always sorted, i.e., a team with more points will always come before a team with lower amount of points. It is possible that multiple teams/contestants have same number of points.
+
+
+
+\begin{center}
+Example input
+\hrule
+\end{center}
+\mbox{}\\
+2\\
+3\\
+Jan 10\\
+Jef 8\\
+Jos 3\\
+5\\
+Jan 10\\
+Els 10\\
+Jos 3\\
+Jef 3\\
+Ann 1\\
+\hrule
+
+	
+\paragraph{Output\\ \\}
+
+For each test case, you need to print N rows. Each row contains the index number of the test case (starting with 1). After that come the rank, name and the score separated by one space. The teams need to be sorted according to their rank from low to high.
+
+
+\begin{center}
+Example output
+\hrule
+\end{center}
+\mbox{} \\
+1 1 Jan 10\\
+1 2 Jef 8\\
+1 3 Jos 3\\
+2 1 Jan 10\\
+2 1 Els 10\\
+2 3 Jos 3\\
+2 3 Jef 3\\
+2 5 Ann 1\\
+\hrule
+
+
+
+
+\end{document}

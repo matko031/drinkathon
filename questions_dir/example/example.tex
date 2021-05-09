@@ -1,0 +1,82 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{listings}
+\begin{document}
+
+\title{Example: select letters}
+\maketitle
+
+
+
+\paragraph{Task\\ \\}
+
+Write a programme that will print a certain letter from each word in a series of words.
+
+\paragraph{Input\\ \\}
+
+Input consists of a number of words together with a certain number for each words that specifies which letter from the word needs to be printed. In the first row, there is one number n specifying the total number of words. After that come n rows with one number and one word per row, separated by a space. The number specifies which letter from the word needs to be printed. You can assume that the number will never be bigger than the number of letters in each word.
+
+
+\begin{center}
+Example input
+\hrule
+\end{center}
+\mbox{}\\
+4\\
+4 programming\\
+13 implementation\\
+3 winning\\
+1 team\\
+\hrule
+
+	
+\paragraph{Output\\ \\}
+
+The output consists of n rows where in each row the selected letter needs to be printed.
+
+\begin{center}
+Example output
+\hrule
+\end{center}
+\mbox{} \\
+g\\
+o\\
+n\\
+t\\
+\hrule
+
+
+\newpage
+
+\begin{lstlisting}[language=Python]
+# input() reads one input line as a string
+# int(x) will cast x to an int
+letters = int(input())
+
+# for i in range(N) is a for loop where goes from 0 to (and including) N-1
+for i in range(letters):
+	# everything with this level of indentation belongs to the for loop 
+	# 	(there are no {} in python)
+
+	# input() will read one lien from the standard input
+	# .rstrip() will strip the extra spaces from the end of a string
+	# .split() will split the string into a list with space 
+	# 	as default separators
+	row = input().rstrip().split()
+	
+	# save 1st element (index 0) of the list row to variable position
+	position = row[0]
+	# save 2nd element (index 1) of the list row to variable position
+	word = row[1]
+    
+    # print(x) will print whatever x is
+    print(word[int(position) - 1])
+\end{lstlisting}
+
+
+
+
+\end{document}

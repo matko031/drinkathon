@@ -1,0 +1,59 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[official]{eurosym}
+\begin{document}
+
+\title{Empty Bottles}
+\maketitle
+
+
+Many years after studying together, John and Peter met each other again on a party in a retirement home. John arrived in a Yugo and Peter in the most recent Maserati. John couldn't believe his eyes and asked Peter: \textit{You used to be such a drunk before and you made it this far. How the hell did you manage to pull that off!?} Peter answered to this: \textit{I kept drinking my whole life, but I returned all my empty bottles only when I became 65 and BAM, I was suddenly rich!}
+
+It would seem that keeping the empty bottles pays off. You followed the same strategy and want to to cash in now. However, you are only interested in even more drinks. You bring several empty crates of Ozujsko back to Konzum and buy more crates of Ozujsko with the money you get. After some time you empty those crates, bring them back and the cycle continues. How long this keeps going depends on the number of crates you bring in initally, price of an empty crate and price of a full crate. At some point, you cannot buy any new crates and you're left with some extra money. In this exercice, you need to calculate how many full crates you can buy in total during this cycle and how much money you have left over at the end.
+
+\paragraph{Task\\ \\}
+
+You begin with B empty crates. Price of one empty crate is $PriceL$. The price of a full crate is $PriceV$ (you can assume that $PriceV > PriceL$ always holds). If you continously exchange empty crates for full ones, how many full crates can you consume until the moment you cannot buy full crates anymore en how much money do you have at that point?
+An example: You have two empty crates, price of one empty crate is 2\euro{}, the price of a full one is 3\euro{}. You exchange your two empty crates for one full one and drink that crate completely. You now have 1 empty crate and 1\euro{}. With this you can buy one full crate, drink it and change for cash. At the end, you will have bought 2 full crates and end with 2\euro{}s.
+
+
+\paragraph{Input\\ \\}
+First row of the input contains the number of test cases. Per test case, there is one row with three numbers separated with a space. Those numbers are:
+\begin{itemize}
+	\item $B$: number of empty crates you start with
+	\item $PriceL$: price of an empty crate
+	\item $PriceV$: price of a full crate
+\end{itemize}
+
+\begin{center}
+Example input
+\hrule
+\end{center}
+\mbox{}\\
+2 \\
+2 2 3\\
+7 1 8\\
+\hrule
+
+	
+\paragraph{Output\\ \\}
+
+For each test case, you need to print one row. Each row begins with the index number of the test case. After that comes the number of crates that you will have bought in total during your cycle of alcoholism in that test case and after that the amount of money you have at the end. The numbers need to be separated by one space.
+
+
+\begin{center}
+Example output
+\hrule
+\end{center}
+\mbox{} \\
+1 2 2\\
+2 0 7\\
+\hrule
+
+
+
+
+\end{document}

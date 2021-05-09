@@ -1,0 +1,59 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+
+\title{The Zoo}
+\maketitle
+
+\paragraph{Task\\ \\}
+
+The Zoo
+
+An animal welfare inspector has to visit all the zoos in his region in order to see if they have enough space for their animals. 
+Because there are lots of animals, he will first do a quick control. During this quick control he will check if the total space needed for all the animals together is smaller or equal to the total surface of the zoo. 
+To simplify his work, you have to write a program that will calculate the total minimal space for the zoo based on the minial space for each animal.
+
+\paragraph{Input\\ \\}
+
+The input looks like this: \\
+\begin{itemize}
+	\item First row contaisn number of test cases (strictly positive integer T: $1 < T < 100$)
+	\item Per each test case, there is one row with number of animals (strictly positive integer B: $1 < b < 100$)
+	\item After that comes 1 row with B positive integers representing minimal space for each animals. These numbers are separated by spaces.
+	
+\end{itemize}
+
+\begin{center}
+Example input
+\hrule
+\end{center}
+\mbox{}\\
+2 \\
+3 \\
+14 5 283\\
+6\\
+54 62 800 10000 4 99\\
+\hrule
+
+	
+\paragraph{Output\\ \\}
+
+For each test case, you need to print one row with the total minimal space for all the animals in the zoo. This must be preceeded by the index number of that test case.
+
+
+\begin{center}
+Example output
+\hrule
+\end{center}
+\mbox{} \\
+1 302\\
+2 11019\\
+\hrule
+
+
+
+
+\end{document}
