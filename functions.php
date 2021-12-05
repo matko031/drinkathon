@@ -40,7 +40,7 @@ function compare_files($file1, $file2){
     $b = fgets($f2);
     $ea = feof($f1);
     $eb = feof($f2);
-    if(($ea || $eb)){
+    if(($eb)){
       if($counter < 2){
         echo 'No output';
         $correct = false;
