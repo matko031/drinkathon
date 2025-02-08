@@ -55,7 +55,7 @@ switch ($url[1]) {
     break;
 
   case 'questions_dir':
-    header('Location: questions_dir/'.url[3]);
+    header('Location: questions_dir/'.$url[3]);
     break;
 
   default:
